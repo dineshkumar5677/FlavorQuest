@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+input:focus {
+  outline: none; 
+  border: none;   
+}
+
+.input{
+  width: 80%;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+}
+.in-box{
+  width: 60%;
+  display: flex;
+  height: 3rem;
+
+}
+.in-box button{
+  width: 20%;
+  border-radius: 0px 10px 10px 0px;
+}
+.item-box{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+ flex-wrap: wrap;
+  overflow: auto;
+  height: 24rem;
+  justify-content: space-evenly;
+  margin: 2% 0px;
+  background-color: rgba(212, 212, 212, 0.636);
+  border-radius: 10px;
+}
+

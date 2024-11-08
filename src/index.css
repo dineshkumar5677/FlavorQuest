@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.imgBox{
+  background-image: url('bg.png');
+  height: 100vh;
+  background-position: center;
+  z-index: -1;
+ 
+}
+.navbar{
+  position: absolute;
+}
+.appBox{
+ 
+  display: flex;
+  flex-direction: column;
+ justify-content: start;
+ align-items:center;
+  width: 100%;
+  margin-top: 6%;
+}
+
