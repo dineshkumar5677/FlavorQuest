@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/FlavorQuest/static/css/main.1cb4300e.css",
+    "main.js": "/FlavorQuest/static/js/main.f60b4073.js",
+    "static/js/453.27247137.chunk.js": "/FlavorQuest/static/js/453.27247137.chunk.js",
+    "static/media/bg.png": "/FlavorQuest/static/media/bg.58b372469fd01c7cf334.png",
+    "static/media/logo-removebg-preview.png": "/FlavorQuest/static/media/logo-removebg-preview.7089f0e18a307bbce533.png",
+    "static/media/spinner.gif": "/FlavorQuest/static/media/spinner.d3fbaf2b81fd92c49692.gif",
+    "index.html": "/FlavorQuest/index.html",
+    "main.1cb4300e.css.map": "/FlavorQuest/static/css/main.1cb4300e.css.map",
+    "main.f60b4073.js.map": "/FlavorQuest/static/js/main.f60b4073.js.map",
+    "453.27247137.chunk.js.map": "/FlavorQuest/static/js/453.27247137.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cb4300e.css",
+    "static/js/main.f60b4073.js"
+  ]
+}
