@@ -2,13 +2,17 @@
 import SearchResult from "./SearchResult";
 import "./App.css";
 import { useState,useEffect } from "react";
-import spinner from './spinner.gif';
+import spinner from './spinner.svg';
 
 function App() {
+ 
   let [tit, settit] = useState("");
 
   function searchbtn() {
+    console.log(tit);
     settit(document.getElementById("searchbox").value);
+    console.log(tit);
+
   }
 
   const [ingredients, setIngredients] = useState([]);
@@ -60,7 +64,7 @@ function App() {
         
         
         />
-        <button onClick={searchbtn} className="btn btn-success">
+        <button onClick={searchbtn} className="btnn">
           Search
         </button>
       </div>

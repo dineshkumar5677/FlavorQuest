@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './searchResult.css';
+import spinner from './spinner.svg';
 
 export default function SearchResult(props) {
   const [data, setData] = useState(null);
@@ -29,7 +30,7 @@ export default function SearchResult(props) {
 
   // Loading and error handling
   if (loading) {
-    return <p>Loading...</p>;
+    return  <img src={spinner}/>;
   }
 
   if (error) {
@@ -49,16 +50,27 @@ export default function SearchResult(props) {
   const kcal = kcalarr.find((nutrient) => nutrient.name === 'Calories')?.amount || 'N/A';
 
   return (
-    <div className="card">
-      <img
-        className="card-img-top"
-        src={`https://img.spoonacular.com/ingredients_500x500/${props.img}`}
-        alt={props.title}
-      />
-      <div className="card-body">
-        <h5 className="card-title">{props.title}</h5>
-        <p className="card-text">{kcal} kcal / {amount} {unit}</p>
-        <a href="#" className="btn btn-primary">Add</a>
+    // <div className="card">
+    //   <img
+    //     className="card-img-top"
+    //     src={`https://img.spoonacular.com/ingredients_500x500/${props.img}`}
+    //     alt={props.title}
+    //   />
+    //   <div className="card-body">
+    //     <h5 className="card-title"></h5>
+    //     <p className="card-text"></p>
+    //     <a href="#" className="btn btn-primary">Add</a>
+    //   </div>
+    // </div>
+    <div className="container">
+      <div className="pizza-image">
+        <img src={`https://img.spoonacular.com/ingredients_500x500/${props.img}`}  alt={props.title} />
+      </div>
+      <div className="pizza-details">
+        <h2 className="title">{props.title}</h2>
+        <p className="description">{kcal} kcal / {amount} {unit}</p>
+        
+        <button className="buy-button">Add to Diet</button>
       </div>
     </div>
   );

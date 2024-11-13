@@ -1,34 +1,119 @@
+/* General Body Styling */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.imgBox{
-  background-image: url('bg.png');
-  height: 100vh;
+/* Background Image Container */
+/* Main container for the background image */
+.imgBox {
+  background-image: url('bg.jpg');
   background-position: center;
-  z-index: -1;
- 
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the whole container */
+  height: 100vh; /* Viewport height */
+  width: 100%; /* Ensure full width */
+  position: relative; /* So we can add elements on top if needed */
+  overflow: hidden; /* Prevent any overflow */
+ /* Smooth transition effects */
 }
-.navbar{
+
+/* Optional: Adding a gradient overlay to enhance visibility of content on top */
+.imgBox:before {
+  content: '';
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+  transition: background 0.3s ease; /* Smooth transition for the overlay */
 }
-.appBox{
- 
+
+/* Hover effect to darken the image */
+
+
+
+/* The content that sits on top of the background and overlay */
+.imgBox .content {
+  position: relative; /* Ensures the content is above the background and overlay */
+  z-index: 2; /* Optional if you have other stacked elements */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  /* Add any additional styling here */
+}
+
+/* Responsiveness: Ensures the image looks good on all screen sizes */
+@media (max-width: 768px) {
+  .imgBox {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgBox {
+    background-position: top; /* Adjust image position on very small screens */
+  }
+}
+
+/* General Styling for the Navbar */
+.main-nav {
+  position: fixed; /* Make navbar fixed at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Container for Navbar Items */
+.nav-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0 3%;
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo-img {
+  width: 250px; /* Logo width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Main Box with App Content */
+.appBox {
   display: flex;
   flex-direction: column;
- justify-content: start;
- align-items:center;
+  justify-content: flex-start; /* Updated to flex-start for clarity */
+  align-items: center;
   width: 100%;
   margin-top: 6%;
 }
 
+/* Mobile Responsiveness: Center the logo and adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: center; /* Center the logo on small screens */
+    background-color: #cec0b2ad;
+  }
+  .appBox {
+    margin-top: 7rem; /* Increased margin for better spacing */
+  }
+  .logo-img {
+    width: 200px; /* Resize logo on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for small screens */
+  .appBox {
+    margin-top: 5rem; /* Reduced top margin */
+  }
+}
